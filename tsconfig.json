@@ -22,9 +22,9 @@
     "paths": {
       "@app/*": ["app/*"],
       "@shared/*": ["shared/*"],
-      "@features/*": ["features/*"],
-      "@entities/*": ["entities/*"],
-      "@widgets/*": ["widgets/*"]
+      "@types/*": ["types/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
