@@ -29,3 +29,12 @@ export interface Result {
   previous: string | null;
   results: Book[];
 }
+
+export interface BookData {
+  id: number;
+  title: string;
+  download_count: number;
+  subjects: string[];
+  imageSrc: string;
+  authors: string[];
+}
