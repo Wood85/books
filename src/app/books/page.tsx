@@ -12,7 +12,7 @@ export default async function Books({ searchParams }: BooksPageProps) {
 
   const searchQuery = params.search || "";
 
-  const languagesQuery = searchParams?.languages || "";
+  const languagesQuery = params.languages || "";
 
   const url = new URL("https://gutendex.com/books");
   if (searchQuery) url.searchParams.set("search", searchQuery);
