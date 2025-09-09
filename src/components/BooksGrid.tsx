@@ -1,18 +1,16 @@
-import BookCard from "./BookCard";
+"use client";
 
-import type { Book } from "./../types/books";
+import EmptyState from "@components/EmptyState";
+import BooksList from "@components/BooksList";
+import Spinner from "@components/Spinner";
+import { useBooks } from "@hooks/useBooks";
 
-interface BooksGridProps {
-  books: Book[];
-}
+export default function BooksGrid() {
+  const { data: books, loading, error } = useBooks();
 
-export default function BookGrid({ books }: BooksGridProps) {
+  if (loading) return <Spinner />;
+  if (error) return <div className="text-red-500">{error}</div>;
+  if (!books || books.length === 0) return <EmptyState />;
 
-  return (
-    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-2xl lg:max-w-7xl">
-      {books.map((book) => (
-        <BookCard key={book.id} data={book} />
-      ))}
-    </div>
-  );
+  return <BooksList books={books} />;
 }
