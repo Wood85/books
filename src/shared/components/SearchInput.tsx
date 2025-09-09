@@ -23,7 +23,7 @@ export default function SearchInput() {
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex gap-2 w-full max-w-md h-10">
+    <form onSubmit={handleSearch} className="flex flex-col gap-2 w-full max-w-md sm:flex-row sm:h-10">
       <input
         type="text"
         value={value}
@@ -33,7 +33,7 @@ export default function SearchInput() {
       />
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition self-end sm:self-auto"
       >
         Найти
       </button>
