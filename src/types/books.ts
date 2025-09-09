@@ -8,7 +8,7 @@ export interface Format {
   [mimeType: string]: string;
 }
 
-export interface Book{
+export interface Book {
   id: number;
   title: string;
   subjects: string[];
